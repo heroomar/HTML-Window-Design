@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive SVG Drawing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #svg-container {
+            width: 80%; /* Outer frame width */
+            height: 80vh; /* Outer frame height */
+            border: 1px solid #ccc;
+        }
+        .TiltDirections-module_lines__rSjio {
+    fill: none;
+    stroke: var(--stroke-color);
+    stroke-width: var(--stroke-width);
+    stroke-miterlimit: 20;
+    stroke-dasharray: 10
+}
+
+.TiltDirections-module_outward__S-UZU {
+    stroke-dasharray: 0
+}
+
+.TiltTurnWindow-module_inside__9-y5w {
+    fill: url(#windowPainGradient);
+    stroke: var(--window-inner-stroke-color);
+    stroke-width: var(--window-inner-stroke-width)
+}
+
+.TiltTurnWindow-module_grill__-ZzSl {
+    fill: var(--grill-color);
+    stroke: var(--window-inner-stroke-color);
+    stroke-width: var(--window-inner-stroke-width)
+}
+
+.TiltTurnWindow-module_outside__hVdUY {
+    fill: var(--color);
+    stroke: var(--window-outer-stroke-color);
+    stroke-width: var(--window-outer-stroke-width)
+}
+
+.TiltTurnWindow-module_kalf__oZfHr {
+    fill: var(--stroke-color);
+    stroke: var(--window-outer-stroke-color);
+    stroke-width: var(--window-outer-stroke-width)
+}
+
+.TiltWindow-module_inside__JHRBY {
+    fill: url(#windowPainGradient);
+    stroke: var(--window-inner-stroke-color);
+    stroke-width: var(--window-inner-stroke-width)
+}
+
+.TiltWindow-module_outside__9NpQc {
+    fill: var(--color);
+    stroke: var(--window-outer-stroke-color);
+    stroke-width: var(--window-outer-stroke-width)
+}
+
+.TiltWindow-module_grill__z4kOr {
+    fill: var(--grill-color);
+    stroke: var(--window-inner-stroke-color);
+    stroke-width: var(--window-inner-stroke-width)
+}
+
+.FixedWindow-module_inside__0-Ff5 {
+    fill: url(#windowPainGradient);
+    stroke: var(--window-inner-stroke-color);
+    stroke-width: var(--window-inner-stroke-width)
+}
+
+.FixedWindow-module_grill__4hdGA {
+    fill: var(--color);
+    stroke: var(--window-inner-stroke-color);
+    stroke-width: var(--window-inner-stroke-width)
+}
+
+.FixedWindow-module_outside__ZX4wj,.FixedWindow-module_kalf__L7CtN {
+    fill: var(--color);
+    stroke: var(--window-outer-stroke-color);
+    stroke-width: var(--window-outer-stroke-width)
+}
+
+.Door-module_Door__8bqBv {
+    fill: var(--color)
+}
+
+.Door-module_Door__8bqBv .paneColor {
+    fill: var(--color)!important
+}
+
+.BreastWork-module_breastwork__Ny1-4 {
+    fill: var(--color);
+    stroke: var(--window-inner-stroke-color);
+    stroke-width: var(--window-inner-stroke-width)
+}
+
+.MovingWindow-module_outside__bjzO2 {
+    fill: var(--grill-color);
+    stroke: var(--window-outer-stroke-color);
+    stroke-width: var(--window-outer-stroke-width)
+}
+
+.BackDoor-module_grill__TF9qz {
+    fill: var(--grill-color);
+    stroke: var(--window-inner-stroke-color);
+    stroke-width: var(--window-inner-stroke-width)
+}
+
+.BackDoor-module_outside__9360U,.BackDoor-module_backDoor__WcgVQ {
+    fill: var(--color);
+    stroke: var(--window-outer-stroke-color);
+    stroke-width: var(--window-outer-stroke-width)
+}
+
+.BackDoor-module_backDoor__WcgVQ .paneColor {
+    fill: var(--color)!important
+}
+
+:root {
+    --stroke-color: #000;
+    --window-outer-stroke-color: var(--stroke-color);
+    --window-outer-stroke-width: var(--stroke-width);
+    --window-inner-stroke-color: var(--stroke-color);
+    --window-inner-stroke-width: var(--stroke-width);
+    --window-glass-color: #f6feff
+}
+
+.Image-module_frame__IenAu {
+    fill: var(--frame-color, #fff);
+    stroke: var(--stroke-color);
+    stroke-width: var(--stroke-width);
+    padding: 2000px
+}
+
+.Image-module_container__sVJdZ {
+    width: 100%;
+    height: 100%
+}
+
+.Image-module_containerWithSizes__RQMsh {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 0 75px
+}
+
+@media (max-width: 920px) {
+    .Image-module_containerWithSizes__RQMsh {
+        padding:0
+    }
+}
+
+.Sill-module_sill__bZ3-0 {
+    fill: var(--window-outer-stroke-color)
+}
+
+:root {
+    --window-glass-color: #aaf6ff
+}
+
+.array-reversed #root__title+div {
+    flex-direction: column-reverse
+}
+
+.array-reversed #root_notes__title+div {
+    flex-direction: column-reverse
+}
+
+.array-reversed .MuiButtonBase-root {
+    rotate: 180deg
+}
+
+._icon_13k03_1 {
+    margin-left: 20px;
+    cursor: pointer
+}
+
+._redirectBar_1a7jw_1 {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: wrap;
+    background: #009fe3;
+    color: #fff
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100;
+    src: url(/assets/dm-sans-latin-ext-100-normal-orMPWdd-.woff2) format("woff2"),url(/assets/dm-sans-latin-ext-100-normal-dOcaJQqt.woff) format("woff");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100;
+    src: url(/assets/dm-sans-latin-100-normal-CF1K6NuN.woff2) format("woff2"),url(/assets/dm-sans-latin-100-normal-B-W3NHPb.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 200;
+    src: url(/assets/dm-sans-latin-ext-200-normal-CkrDxaer.woff2) format("woff2"),url(/assets/dm-sans-latin-ext-200-normal-FKBP1IJi.woff) format("woff");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 200;
+    src: url(/assets/dm-sans-latin-200-normal-BiTzQvef.woff2) format("woff2"),url(/assets/dm-sans-latin-200-normal-IilI9LdF.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: url(/assets/dm-sans-latin-ext-300-normal-C06zYcNH.woff2) format("woff2"),url(/assets/dm-sans-latin-ext-300-normal-CJf67p0q.woff) format("woff");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: url(/assets/dm-sans-latin-300-normal-CfSGLRSF.woff2) format("woff2"),url(/assets/dm-sans-latin-300-normal-Cjw7_AC8.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(/assets/dm-sans-latin-ext-400-normal-Cygz-XR6.woff2) format("woff2"),url(/assets/dm-sans-latin-ext-400-normal-NAt9AhwD.woff) format("woff");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url(/assets/dm-sans-latin-400-normal-COF6noiJ.woff2) format("woff2"),url(/assets/dm-sans-latin-400-normal-DmRB7q_B.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url(/assets/dm-sans-latin-ext-500-normal-BBd_G3i-.woff2) format("woff2"),url(/assets/dm-sans-latin-ext-500-normal-hI9Kr37g.woff) format("woff");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url(/assets/dm-sans-latin-500-normal-kGSpR5A9.woff2) format("woff2"),url(/assets/dm-sans-latin-500-normal-DN3Amd4H.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: url(/assets/dm-sans-latin-ext-600-normal-CFRgRepe.woff2) format("woff2"),url(/assets/dm-sans-latin-ext-600-normal-Czy-B68B.woff) format("woff");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: url(/assets/dm-sans-latin-600-normal-DrBIvsIy.woff2) format("woff2"),url(/assets/dm-sans-latin-600-normal-DOZeTYVF.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url(/assets/dm-sans-latin-ext-700-normal-CGQ_Vo0j.woff2) format("woff2"),url(/assets/dm-sans-latin-ext-700-normal-BS_Ohp14.woff) format("woff");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url(/assets/dm-sans-latin-700-normal-1DREuLwQ.woff2) format("woff2"),url(/assets/dm-sans-latin-700-normal-ryGpXDOP.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 800;
+    src: url(/assets/dm-sans-latin-ext-800-normal-CN_krSfo.woff2) format("woff2"),url(/assets/dm-sans-latin-ext-800-normal-Db8yI-9n.woff) format("woff");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 800;
+    src: url(/assets/dm-sans-latin-800-normal-DNgzLT-q.woff2) format("woff2"),url(/assets/dm-sans-latin-800-normal-C_AxdMGW.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 900;
+    src: url(/assets/dm-sans-latin-ext-900-normal-DOPK8rWp.woff2) format("woff2"),url(/assets/dm-sans-latin-ext-900-normal-Bp5TxfHP.woff) format("woff");
+    unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF
+}
+
+@font-face {
+    font-family: DM Sans;
+    font-style: normal;
+    font-display: swap;
+    font-weight: 900;
+    src: url(/assets/dm-sans-latin-900-normal-Be3p819r.woff2) format("woff2"),url(/assets/dm-sans-latin-900-normal-D3psrNqv.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD
+}
+#container svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+#container {
+    height: 90vh; /*min(90vh, 800px);*/
+    max-height: 400px;
+}
+    </style>
+
+
+</head>
+<body>
+
+<div class="row" style="width: 100%;"  >
+    <div class="col-md-8" >
+        <div id="container"></div>
+    </div>
+    <div class="col-md-4" >
+        <form >
+              <div class="form-group">
+                <label for="email">width</label>
+                <input type="number" class="form-control" id="fieldwidth" value="900" onkeyup="draw()" >
+              </div>
+              <div class="form-group">
+                <label for="email">height</label>
+                <input type="number" class="form-control" id="fieldheight" value="900" onkeyup="draw()" >
+              </div>
+        </form> 
+    </div>
+</div>
+
+<script>
+    // Function to create and draw the SVG based on custom width and height
+    function drawSVG(svgWidth, svgHeight) {
+        let ratio = svgWidth/svgHeight;
+
+        if (ratio >= 1){
+            width = 1022;
+            height = width/ratio;
+        } else {
+            height = 1022;
+            width = height*ratio;
+        }
+
+        console.log(ratio,height,width)
+
+        if(svgWidth > 0 && svgHeight > 0){
+
+        } else {
+            return false;
+        }
+
+        if (height > 1023 || width > 1023 || isNaN(height) || isNaN(width)) { return false; }
+
+
+        let _w = (width*0.40740740740740744);
+        let _h = (height*0.8222222222222222);
+
+        let __w = (width*0.28518518518518515);
+        let __h = (height*0.7000000000000001);
+        let _wx = (width-(_w*2))/3;
+        let _hx = (height-_h)/2;
+
+        let ___w = (width*0.40740740740740744);
+        let ___h = (height*0.8222222222222222);
+
+
+        let windows = `<g data-testid="plane">
+                    <g data-testid="container">
+                        <g data-testid="plane">
+                            <g data-testid="window">
+                                <defs>
+                                    <linearGradient id="windowPainGradient" gradientTransform="rotate(45)">
+                                        <stop offset="45%" stop-color="#D1E0E9"></stop>
+                                        <stop offset="100%" stop-color="#9ACBEA"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="`+_wx+`" y="`+_hx+`" width="`+_w+`" height="`+_h+`" class="TiltTurnWindow-module_outside__hVdUY" style="--color: #ffffff;"></rect>
+                                <rect x="`+(((_w-__w)/2)+_wx)+`" y="`+(((_h-__h)/2)+_hx)+`" width="`+__w+`" height="`+__h+`" class="TiltTurnWindow-module_inside__9-y5w"></rect>
+                                <g data-testid="tilt-up">
+                                    <line x1="`+_wx+`" y1="`+(_h+_hx)+`" x2="`+(_wx+(_w/2))+`" y2="`+_hx+`" class="TiltDirections-module_lines__rSjio"></line>
+                                    <line x1="`+(_wx+(_w/2))+`" y1="`+_hx+`" x2="`+(_wx+_w)+`" y2="`+(_hx+_h)+`" class="TiltDirections-module_lines__rSjio"></line>
+                                </g>
+                                <g data-testid="turn-left">
+                                    <line x1="`+_wx+`" y1="`+_hx+`" x2="`+(_wx+(_w))+`" y2="`+(_wx+(_h/2))+`" class="TiltDirections-module_lines__rSjio"></line>
+
+                                    <line x1="`+(_wx+_w)+`" y1="`+(_wx+(_h/2))+`" x2="`+(_wx)+`" y2="`+(_hx+_h)+`" class="TiltDirections-module_lines__rSjio"></line>
+                                </g>
+                                <text class="paneCount" x="`+(width/4)+`" y="`+(height/2)+`" width="388.36" height="756.28" text-anchor="middle" font-size="2rem">1</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g data-testid="plane">
+                    <g data-testid="container">
+                        <g data-testid="plane">
+                            <g data-testid="window">
+                                <defs>
+                                    <linearGradient id="windowPainGradient" gradientTransform="rotate(45)">
+                                        <stop offset="45%" stop-color="#D1E0E9"></stop>
+                                        <stop offset="100%" stop-color="#9ACBEA"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <rect x="`+((_wx*2)+_w)+`" y="`+_hx+`" width="`+___w+`" height="`+___h+`" class="FixedWindow-module_inside__0-Ff5"></rect>
+                                <text class="paneCount" x="`+(((_wx*2)+_w)+(___w/2))+`" y="`+(height/2)+`" width="388.36" height="756.28" text-anchor="middle" font-size="2rem">2</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>`;
+        container.innerHTML = `
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024" height="1024" viewBox="-1 -52.099999999999966 1024 1024" xml:space="preserve" style="--stroke-width: 2px; overflow: visible;">
+    <rect x="0" y="0" width="`+width+`" height="`+height+`" class="Image-module_frame__IenAu" style="--frame-color: #ffffff;"></rect>
+    <g data-testid="container">
+        <g data-testid="plane">
+            <g data-testid="container">
+                
+
+            `+windows+`
+
+
+            </g>
+        </g>
+    </g>
+    <g id="horizontalOuterMarker">
+        <rect width="`+width+`" height="1" fill="#000" x="0" y="-30"></rect>
+        <rect width="1" height="20" fill="#000" x="0" y="-40"></rect>
+        <rect width="1" height="20" fill="#000" x="`+width+`" y="-40"></rect>
+        <text y="-45" font-size="30" x="`+(width/2)+`" text-anchor="middle" alignment-baseline="middle">`+svgWidth+`</text>
+    </g>
+    <g id="verticalOuterMarker">
+        <rect width="1" height="`+height+`" fill="#000" y="0" x="-30"></rect>
+        <rect width="20" height="1" fill="#000" x="-40"></rect>
+        <rect width="20" height="1" fill="#000" x="-40" y="`+height+`"></rect>
+        <text x="-35" y="`+(height/2)+`" text-anchor="end" alignment-baseline="middle" font-size="30">`+svgHeight+`</text>
+    </g>
+</svg>`; // Clear previous SVG if any
+        // container.appendChild(svgElement);
+    }
+
+    // Example usage:
+    // const frameWidth = 800;   // Outer frame width
+    // const frameHeight = 600;  // Outer frame height
+    // const svgWidth = 1024;    // SVG original width
+    // const svgHeight = 1024;   // SVG original height
+
+    
+    function draw(){
+        var svgWidth = parseInt(fieldwidth.value)
+        var svgHeight = parseInt(fieldheight.value)
+
+        drawSVG(svgWidth, svgHeight);
+    }
+
+    // draw();
+</script>
+
+</body>
+</html>
