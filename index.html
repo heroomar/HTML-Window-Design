@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0030)https://hssolsdemos.com/frame/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive SVG Drawing</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Window Configurator</title>
+    <link href="./Window Configurator_files/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .color-option {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .selected {
+            border: 2px solid green;
+        }
+    </style>
     <style>
         body {
             margin: 0;
@@ -144,7 +152,7 @@
 }
 
 .Image-module_frame__IenAu {
-    fill: var(--frame-color, #fff);
+    /* fill: var(--frame-color, #fff); */
     stroke: var(--stroke-color);
     stroke-width: var(--stroke-width);
     padding: 2000px
@@ -374,30 +382,129 @@
     max-height: 400px;
 }
     </style>
-
-
 </head>
 <body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6" style="display: flex;flex-direction: column;justify-content: space-around;">
+                <div id="container">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024" height="1024" viewBox="-1 -52.099999999999966 1024 1024" xml:space="preserve" style="--stroke-width: 2px; overflow: visible;">
+                    <rect x="0" y="0" width="1022" height="681.3333333333334" class="Image-module_frame__IenAu" style="fill: #FFFFFF"></rect>
+                    <g data-testid="container">
+                        <g data-testid="plane">
+                            <g data-testid="container">
+                            <g data-testid="plane">
+                    <g data-testid="container">
+                        <g data-testid="plane">
+                            <g data-testid="window">
+                                <defs>
+                                    <lineargradient id="windowPainGradient" gradientTransform="rotate(45)">
+                                        <stop offset="45%" stop-color="#D1E0E9"></stop>
+                                        <stop offset="100%" stop-color="#9ACBEA"></stop>
+                                    </lineargradient>
+                                </defs>
+                                <rect x="63.08641975308641" y="60.562962962962956" width="416.3703703703704" height="560.2074074074075" class="TiltTurnWindow-module_outside__hVdUY" style="fill: #FFFFFF"></rect>
+                                <rect x="125.54197530864198" y="102.19999999999999" width="291.4592592592592" height="476.9333333333334" class="TiltTurnWindow-module_inside__9-y5w"></rect>
+                                <g data-testid="tilt-up">
+                                    <line x1="63.08641975308641" y1="620.7703703703704" x2="271.2716049382716" y2="60.562962962962956" class="TiltDirections-module_lines__rSjio"></line>
+                                    <line x1="271.2716049382716" y1="60.562962962962956" x2="479.4567901234568" y2="620.7703703703704" class="TiltDirections-module_lines__rSjio"></line>
+                                </g>
+                                <g data-testid="turn-left">
+                                    <line x1="63.08641975308641" y1="60.562962962962956" x2="479.4567901234568" y2="343.19012345679016" class="TiltDirections-module_lines__rSjio"></line>
+                        <line x1="479.4567901234568" y1="343.19012345679016" x2="63.08641975308641" y2="620.7703703703704" class="TiltDirections-module_lines__rSjio"></line>                       
+                                </g>
+                                <text class="paneCount" x="255.5" y="340.6666666666667" width="388.36" height="756.28" text-anchor="middle" font-size="2rem">1</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g data-testid="plane">
+                    <g data-testid="container">
+                        <g data-testid="plane">
+                            <g data-testid="window">
+                                <defs>
+                                    <lineargradient id="windowPainGradient" gradientTransform="rotate(45)">
+                                        <stop offset="45%" stop-color="#D1E0E9"></stop>
+                                        <stop offset="100%" stop-color="#9ACBEA"></stop>
+                                    </lineargradient>
+                                </defs>
+                                <rect x="542.5432098765432" y="60.562962962962956" width="416.3703703703704" height="560.2074074074075" class="FixedWindow-module_inside__0-Ff5"></rect>
+                                <text class="paneCount" x="750.7283950617284" y="340.6666666666667" width="388.36" height="756.28" text-anchor="middle" font-size="2rem">2</text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="horizontalOuterMarker">
+                        <rect width="1022" height="1" fill="#000" x="0" y="-30"></rect>
+                        <rect width="1" height="20" fill="#000" x="0" y="-40"></rect>
+                        <rect width="1" height="20" fill="#000" x="1022" y="-40"></rect>
+                        <text y="-45" font-size="30" x="511" text-anchor="middle" alignment-baseline="middle">1200</text>
+                    </g>
+                    <g id="verticalOuterMarker">
+                        <rect width="1" height="681.3333333333334" fill="#000" y="0" x="-30"></rect>
+                        <rect width="20" height="1" fill="#000" x="-40"></rect>
+                        <rect width="20" height="1" fill="#000" x="-40" y="681.3333333333334"></rect>
+                        <text x="-35" y="340.6666666666667" text-anchor="end" alignment-baseline="middle" font-size="30">800</text>
+                    </g>
+                </svg></div>
+            </div>
+            <div class="col-md-6">
+                <h4>Dimensions</h4>
+                <div class="mb-3">
+                    <label class="form-label">Width (mm)</label>
+                    <input type="text" class="form-control" id="fieldwidth" onkeyup="draw()" value="1200">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Height (mm)</label>
+                    <input type="text" class="form-control" id="fieldheight" onkeyup="draw()" value="800">
+                </div>
+                <h5>Color fixed frame Exterior</h5>
+                <div class="">
+                    <div class="color-option selected" data-color="#FFFFFF" style="background-color: #FFFFFF;"></div>
+                    <div class="color-option" data-color="#F5F5DC" style="background-color: #F5F5DC;"></div>
+                    <div class="color-option" data-color="#555555" style="background-color: #555555;"></div>
+                    <div class="color-option" data-color="#000000" style="background-color: #000000;"></div>
+                    <div class="color-option" data-color="#2E8B57" style="background-color: #2E8B57;"></div>
+                    <div class="color-option" data-color="#4682B4" style="background-color: #4682B4;"></div>
+                </div>
+                <h5>Color of moving parts outside</h5>
+                <div class="">
+                    <div class="color-option selected" data-color="#FFFFFF" style="background-color: #FFFFFF;"></div>
+                    <div class="color-option" data-color="#F5F5DC" style="background-color: #F5F5DC;"></div>
+                    <div class="color-option" data-color="#555555" style="background-color: #555555;"></div>
+                    <div class="color-option" data-color="#000000" style="background-color: #000000;"></div>
+                    <div class="color-option" data-color="#2E8B57" style="background-color: #2E8B57;"></div>
+                    <div class="color-option" data-color="#4682B4" style="background-color: #4682B4;"></div>
+                </div>
+                <h5>Direction of rotation</h5>
+                <div class="mb-3">
+                    <select class="form-select" id="directionrotation" onchange="draw()">
+                        <option value="1">Counterclockwise</option>
+                        <option value="2">Clockwise</option>
+                    </select>
+                </div>
+                <h5>Distribution</h5>
+                <div class="mb-3">
+                    <select class="form-select" id="distribution" onchange="draw()">
+                        <option value="1-1">1-1</option>
+                        <option value="1-2">1-2</option>
+                        <option value="2-1">2-1</option>
+                    </select>
+                </div>
 
-<div class="row" style="width: 100%;"  >
-    <div class="col-md-8" >
-        <div id="container"></div>
+                
+                <h4 class="mt-3">Total amount incl. VAT</h4>
+                <h3>€0.00</h3>
+                <button class="btn btn-success">Add to quote</button>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4" >
-        <form >
-              <div class="form-group">
-                <label for="email">width</label>
-                <input type="number" class="form-control" id="fieldwidth" value="900" onkeyup="draw()" >
-              </div>
-              <div class="form-group">
-                <label for="email">height</label>
-                <input type="number" class="form-control" id="fieldheight" value="900" onkeyup="draw()" >
-              </div>
-        </form> 
-    </div>
-</div>
-
-<script>
+    <script src="./Window Configurator_files/bootstrap.bundle.min.js.download"></script>
+    <script src="./Window Configurator_files/jquery.min.js.download"></script>
+    <script>
     // Function to create and draw the SVG based on custom width and height
     function drawSVG(svgWidth, svgHeight) {
         let ratio = svgWidth/svgHeight;
@@ -420,8 +527,11 @@
 
         if (height > 1023 || width > 1023 || isNaN(height) || isNaN(width)) { return false; }
 
+        let  window_width = (0.40740740740740744*2);
 
-        let _w = (width*0.40740740740740744);
+        let window_dimension=0;
+
+        let _w = (width*(window_width/2));
         let _h = (height*0.8222222222222222);
 
         let __w = (width*0.28518518518518515);
@@ -429,9 +539,28 @@
         let _wx = (width-(_w*2))/3;
         let _hx = (height-_h)/2;
 
-        let ___w = (width*0.40740740740740744);
+        let ___w = (width*(window_width/2));
         let ___h = (height*0.8222222222222222);
 
+        if(distribution.value == '1-2'){
+            window_dimension=100;
+        }
+        if(distribution.value == '2-1'){
+            window_dimension=-100;
+        }
+        _w += window_dimension
+        ___w -= window_dimension
+
+        let module_frame_style = 'fill: '+$('.color-option.selected').eq(0).data('color');
+        let moving_module_outside = 'fill: '+$('.color-option.selected').eq(1).data('color');
+        let direction ='';
+        if (directionrotation.value == '1'){
+            direction = `<line x1="`+_wx+`" y1="`+_hx+`" x2="`+(_wx+(_w))+`" y2="`+(_wx+(_h/2))+`" class="TiltDirections-module_lines__rSjio"></line>
+                        <line x1="`+(_wx+_w)+`" y1="`+(_wx+(_h/2))+`" x2="`+(_wx)+`" y2="`+(_hx+_h)+`" class="TiltDirections-module_lines__rSjio"></line>`
+        } else {
+            direction = `<line x1="`+(_wx+_w)+`" y1="`+_hx+`" x2="`+(_wx)+`" y2="`+(_wx+(_h/2))+`" class="TiltDirections-module_lines__rSjio"></line>
+                            <line x1="`+(_wx)+`" y1="`+(_wx+(_h/2))+`" x2="`+(_wx+_w)+`" y2="`+(_hx+_h)+`" class="TiltDirections-module_lines__rSjio"></line>`;
+        }
 
         let windows = `<g data-testid="plane">
                     <g data-testid="container">
@@ -443,16 +572,14 @@
                                         <stop offset="100%" stop-color="#9ACBEA"></stop>
                                     </linearGradient>
                                 </defs>
-                                <rect x="`+_wx+`" y="`+_hx+`" width="`+_w+`" height="`+_h+`" class="TiltTurnWindow-module_outside__hVdUY" style="--color: #ffffff;"></rect>
+                                <rect x="`+_wx+`" y="`+_hx+`" width="`+_w+`" height="`+_h+`" class="TiltTurnWindow-module_outside__hVdUY" style="`+(moving_module_outside)+`"></rect>
                                 <rect x="`+(((_w-__w)/2)+_wx)+`" y="`+(((_h-__h)/2)+_hx)+`" width="`+__w+`" height="`+__h+`" class="TiltTurnWindow-module_inside__9-y5w"></rect>
                                 <g data-testid="tilt-up">
                                     <line x1="`+_wx+`" y1="`+(_h+_hx)+`" x2="`+(_wx+(_w/2))+`" y2="`+_hx+`" class="TiltDirections-module_lines__rSjio"></line>
                                     <line x1="`+(_wx+(_w/2))+`" y1="`+_hx+`" x2="`+(_wx+_w)+`" y2="`+(_hx+_h)+`" class="TiltDirections-module_lines__rSjio"></line>
                                 </g>
                                 <g data-testid="turn-left">
-                                    <line x1="`+_wx+`" y1="`+_hx+`" x2="`+(_wx+(_w))+`" y2="`+(_wx+(_h/2))+`" class="TiltDirections-module_lines__rSjio"></line>
-
-                                    <line x1="`+(_wx+_w)+`" y1="`+(_wx+(_h/2))+`" x2="`+(_wx)+`" y2="`+(_hx+_h)+`" class="TiltDirections-module_lines__rSjio"></line>
+                                    `+direction+`                       
                                 </g>
                                 <text class="paneCount" x="`+(width/4)+`" y="`+(height/2)+`" width="388.36" height="756.28" text-anchor="middle" font-size="2rem">1</text>
                             </g>
@@ -476,32 +603,28 @@
                     </g>
                 </g>`;
         container.innerHTML = `
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024" height="1024" viewBox="-1 -52.099999999999966 1024 1024" xml:space="preserve" style="--stroke-width: 2px; overflow: visible;">
-    <rect x="0" y="0" width="`+width+`" height="`+height+`" class="Image-module_frame__IenAu" style="--frame-color: #ffffff;"></rect>
-    <g data-testid="container">
-        <g data-testid="plane">
-            <g data-testid="container">
-                
-
-            `+windows+`
-
-
-            </g>
-        </g>
-    </g>
-    <g id="horizontalOuterMarker">
-        <rect width="`+width+`" height="1" fill="#000" x="0" y="-30"></rect>
-        <rect width="1" height="20" fill="#000" x="0" y="-40"></rect>
-        <rect width="1" height="20" fill="#000" x="`+width+`" y="-40"></rect>
-        <text y="-45" font-size="30" x="`+(width/2)+`" text-anchor="middle" alignment-baseline="middle">`+svgWidth+`</text>
-    </g>
-    <g id="verticalOuterMarker">
-        <rect width="1" height="`+height+`" fill="#000" y="0" x="-30"></rect>
-        <rect width="20" height="1" fill="#000" x="-40"></rect>
-        <rect width="20" height="1" fill="#000" x="-40" y="`+height+`"></rect>
-        <text x="-35" y="`+(height/2)+`" text-anchor="end" alignment-baseline="middle" font-size="30">`+svgHeight+`</text>
-    </g>
-</svg>`; // Clear previous SVG if any
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024" height="1024" viewBox="-1 -52.099999999999966 1024 1024" xml:space="preserve" style="--stroke-width: 2px; overflow: visible;">
+                    <rect x="0" y="0" width="`+width+`" height="`+height+`" class="Image-module_frame__IenAu" style="`+module_frame_style+`"></rect>
+                    <g data-testid="container">
+                        <g data-testid="plane">
+                            <g data-testid="container">
+                            `+windows+`
+                            </g>
+                        </g>
+                    </g>
+                    <g id="horizontalOuterMarker">
+                        <rect width="`+width+`" height="1" fill="#000" x="0" y="-30"></rect>
+                        <rect width="1" height="20" fill="#000" x="0" y="-40"></rect>
+                        <rect width="1" height="20" fill="#000" x="`+width+`" y="-40"></rect>
+                        <text y="-45" font-size="30" x="`+(width/2)+`" text-anchor="middle" alignment-baseline="middle">`+svgWidth+`</text>
+                    </g>
+                    <g id="verticalOuterMarker">
+                        <rect width="1" height="`+height+`" fill="#000" y="0" x="-30"></rect>
+                        <rect width="20" height="1" fill="#000" x="-40"></rect>
+                        <rect width="20" height="1" fill="#000" x="-40" y="`+height+`"></rect>
+                        <text x="-35" y="`+(height/2)+`" text-anchor="end" alignment-baseline="middle" font-size="30">`+svgHeight+`</text>
+                    </g>
+                </svg>`; // Clear previous SVG if any
         // container.appendChild(svgElement);
     }
 
@@ -519,8 +642,12 @@
         drawSVG(svgWidth, svgHeight);
     }
 
-    // draw();
+    draw();
+
+    $('.color-option').on('click',function(){
+        $(this).addClass('selected').siblings().removeClass('selected');
+        draw();
+    });
 </script>
 
-</body>
-</html>
+</body></html>
